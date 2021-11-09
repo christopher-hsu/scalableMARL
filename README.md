@@ -106,7 +106,7 @@ python3 algos/maTT/run_script.py --mode test --render 1 --log_dir ./saved_result
 ```
 ### To see training curves
 ```
-tensorboard --logdir ./saved_results/maTT/setTracking-v0_123456789/
+tensorboard --logdir ./results/maTT/setTracking-v0_123456789/
 ```
 
 
