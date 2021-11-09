@@ -2,7 +2,7 @@
 
 [Scalable Reinforcement Learning Policies for Multi-Agent Control](https://arxiv.org/abs/2011.08055)
 
-CD. Hsu, H. Jeong, GJ. Pappas,and P. Chaudhari. "Scalable Reinforcement Learning Policies for Multi-Agent Control". IEEE International Conference on Intelligent Robots and Systems (IROS), Prague, Czech Republic, 2021.
+CD. Hsu, H. Jeong, GJ. Pappas, P. Chaudhari. "Scalable Reinforcement Learning Policies for Multi-Agent Control". IEEE International Conference on Intelligent Robots and Systems (IROS), Prague, Czech Republic, 2021.
 
 Multi-Agent Reinforcement Learning method to learn scalable control polices for multi-agent target tracking.
 
