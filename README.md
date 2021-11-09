@@ -1,4 +1,7 @@
 # Scalable Reinforcement Learning Policies for Multi-Agent Control
+
+https://arxiv.org/abs/2011.08055
+
 Multi-Agent Reinforcement Learning method to learn scalable control polices for multi-agent target tracking.
 
 + Author: Christopher Hsu
@@ -107,6 +110,19 @@ python3 algos/maTT/run_script.py --mode test --render 1 --log_dir ./saved_result
 ### To see training curves
 ```
 tensorboard --logdir ./results/maTT/setTracking-v0_123456789/
+```
+### Citing scalableMARL
+If you reference or use scalableMARL in your research, please cite:
+```
+@misc{hsu2021scalable,
+      title={Scalable Reinforcement Learning Policies for Multi-Agent Control}, 
+      author={Christopher D. Hsu and Heejin Jeong and George J. Pappas and Pratik Chaudhari},
+      year={2021},
+      eprint={2011.08055},
+      archivePrefix={arXiv},
+      primaryClass={cs.MA}
+}
+
 ```
 
 
