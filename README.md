@@ -20,7 +20,7 @@ Within scalableMARL (highlighting the important files):
 ```
 scalableMARL
     |___algos
-        |___maTT                          #RL alg for the target tracking environment
+        |___maTT                          #RL alg folder for the target tracking environment
             |___core                      #Self-Attention-based Model Architecture
             |___core_behavior             #Used for further evaluation (Ablation D.2.)
             |___dql                       #Soft Double Q-Learning
