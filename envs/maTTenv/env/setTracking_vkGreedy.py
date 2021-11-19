@@ -57,8 +57,8 @@ class setTrackingEnvkGreedy(maTrackingBase):
         self.limit['target'] = [np.concatenate((self.MAP.mapmin,[-METADATA['target_vel_limit'], -METADATA['target_vel_limit']])),
                                 np.concatenate((self.MAP.mapmax, [METADATA['target_vel_limit'], METADATA['target_vel_limit']]))]
         rel_vel_limit = METADATA['target_vel_limit'] + METADATA['action_v'][0] # Maximum relative speed
-        self.limit['state'] = [np.array(([0.0, -np.pi, -rel_vel_limit, -10*np.pi, 0.0])),
-                               np.array(([600.0, np.pi, rel_vel_limit, 10*np.pi, 2.0]))]
+        self.limit['state'] = [np.array(([0.0, -np.pi, -rel_vel_limit, -10*np.pi, -50.0, 0.0])),
+                               np.array(([600.0, np.pi, rel_vel_limit, 10*np.pi, 50.0, 2.0]))]
         self.observation_space = spaces.Box(self.limit['state'][0], self.limit['state'][1], dtype=np.float32)
         self.targetA = np.concatenate((np.concatenate((np.eye(2), self.sampling_period*np.eye(2)), axis=1), 
                                         [[0,0,1,0],[0,0,0,1]]))
