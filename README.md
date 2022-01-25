@@ -91,7 +91,7 @@ source setup
 ```
 scalableMARL repo is ready to go
 
-### Running an algorithm (for example maPredPrey)
+### Running an algorithm
 ```
 # its best to run from the scalableMARL folder so that logging and saving is consistent
 cd ./scalableMARL
