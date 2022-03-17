@@ -25,4 +25,4 @@ pyyaml
 mpi4py
 tensorboard
 seaborn
-pillow          ==7.2.0
+pillow
