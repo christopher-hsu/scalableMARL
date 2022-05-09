@@ -27,8 +27,4 @@ pyyaml
 mpi4py
 tensorboard
 seaborn
-<<<<<<< HEAD
 pillow
-=======
-pillow
->>>>>>> a5485f87592a4c746835a07f51ade79dabdbc79a
