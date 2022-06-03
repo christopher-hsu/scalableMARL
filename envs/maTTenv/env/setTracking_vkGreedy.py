@@ -44,7 +44,7 @@ class setTrackingEnvkGreedy(maTrackingBase):
         self.id = 'setTracking-vkGreedy'
         ###=======================================================###
         # Assign agents to closest k targets, if less targets than k, consider all targets
-        self.k = 2
+        self.k = 4
         ###=======================================================###
         self.nb_agents = num_agents #only for init, will change with reset()
         self.nb_targets = num_targets #only for init, will change with reset()
