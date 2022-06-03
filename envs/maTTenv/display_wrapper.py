@@ -11,7 +11,7 @@ matplotlib.use('TkAgg')
 from matplotlib import pyplot as plt
 from matplotlib import patches
 from matplotlib import animation
-from maTTenv.metadata import *
+from envs.maTTenv.metadata import *
 
 class Display2D(Wrapper):
     def __init__(self, env, figID = 0, skip = 1, confidence=0.95):
