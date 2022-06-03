@@ -53,6 +53,13 @@ sudo apt-get update
 sudo apt-get install python3.8-dev
 ```
 
+## Set up environment (conda or virtualenv)
+
+### Set up with conda
+conda env -f create environment.yml
+conda activate scalableMARL
+source setup
+
 ### Set up virtualenv
 Python virtual environments are used to isolate package installation from the system
 
