@@ -53,6 +53,14 @@ sudo apt-get update
 sudo apt-get install python3.8-dev
 ```
 
+## Set up environment (conda or virtualenv)
+
+### Set up with conda
+```
+conda env -f create environment.yml
+conda activate scalableMARL
+source setup
+```
 ### Set up virtualenv
 Python virtual environments are used to isolate package installation from the system
 
@@ -71,7 +79,7 @@ Now that the virtualenv is activated, you can install packages that are isolated
 
 When the venv is activated, you can now install packages and run scripts
 
-### Install isolated packages in your venv
+#### Install isolated packages in your venv
 ```
 sudo apt-get install -y eog python3-tk python3-yaml python3-pip ssh git
 
@@ -82,7 +90,9 @@ pip3 install --trusted-host pypi.python.org -r requirements.txt
 ## Current workflow
 ### Setup repos
 ```
-# activate virtualenv
+# activate env
+conda activate scalableMARL
+# or
 source ./'virtualenv name'/bin/activate
 # change directory to scalableMARL
 cd ./scalableMARL

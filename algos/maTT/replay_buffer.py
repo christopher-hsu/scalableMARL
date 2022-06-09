@@ -99,6 +99,6 @@ class ReplayBufferSet(object):
         """
 
         # nb_targets = np.random.random_integers(1, num_targets)
-        nb_targets = np.random.random_integers(1, len(self._storage))
-        idxes = [np.random.random_integers(0, len(self._storage[nb_targets]) - 1) for _ in range(batch_size)]
+        nb_targets = np.random.randint(1, len(self._storage))
+        idxes = [np.random.randint(0, len(self._storage[nb_targets]) - 1) for _ in range(batch_size)]
         return self._encode_sample(batch_size, idxes, nb_targets)

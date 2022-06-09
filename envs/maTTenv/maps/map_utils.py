@@ -20,7 +20,7 @@ def round(x):
 
 class GridMap(object):
   def __init__(self, map_path, r_max=1.0, fov=np.pi, margin2wall=0.5):
-    map_config = yaml.load(open(map_path+".yaml", "r"))
+    map_config = yaml.safe_load(open(map_path+".yaml", "r"))
     self.map = np.loadtxt(map_path+".cfg")
     if 'empty' in map_path:
       self.map = None

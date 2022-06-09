@@ -111,8 +111,8 @@ class setTrackingEnv0(maTrackingBase):
             self.nb_agents = kwargs['nb_agents']
             self.nb_targets = kwargs['nb_targets']
         except:
-            self.nb_agents = np.random.random_integers(1, self.num_agents)
-            self.nb_targets = np.random.random_integers(1, self.num_targets)
+            self.nb_agents = np.random.randint(1, self.num_agents)
+            self.nb_targets = np.random.randint(1, self.num_targets)
         obs_dict = {}
         init_pose = self.get_init_pose(**kwargs)
         # Initialize agents
