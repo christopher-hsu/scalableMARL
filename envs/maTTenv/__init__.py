@@ -21,6 +21,9 @@ def make(env_name, render=False, figID=0, record=False, directory='',
     elif env_name == 'setTracking-vkGreedy':
         from envs.maTTenv.env.setTracking_vkGreedy import setTrackingEnvkGreedy
         env0 = setTrackingEnvkGreedy(num_agents=num_agents, num_targets=num_targets, **kwargs)
+    elif env_name == 'setTracking-model':
+        from envs.maTTenv.env.setTracking_model import setTrackingEnvModel
+        env0 = setTrackingEnvModel(num_agents=num_agents, num_targets=num_targets, **kwargs)
     elif env_name == 'setTracking-vGru':
         from envs.maTTenv.env.setTracking_vGru import setTrackingEnvGru
         env0 = setTrackingEnvGru(num_agents=num_agents, num_targets=num_targets, **kwargs)

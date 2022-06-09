@@ -52,7 +52,7 @@ class Test:
         torch.manual_seed(seed)
         np.random.seed(seed)
 
-        set_eval = eval_set(num_agents, num_targets)
+        set_eval = eval_set(env.num_agents, env.num_targets)
         if args.eval_type == 'random':
             params_set = [{}]
         elif args.eval_type == 'fixed_nb':
@@ -65,11 +65,6 @@ class Test:
         timelimit_env = env
         while( not hasattr(timelimit_env, '_elapsed_steps')):
             timelimit_env = timelimit_env.env
-
-        if args.ros_log:
-            from envs.target_tracking.ros_wrapper import RosLog
-            ros_log = RosLog(num_targets=args.nb_targets, wrapped_num=args.ros + args.render + args.record + 1)
-
 
         total_nlogdetcov = []
         total_intruders = []
@@ -89,8 +84,6 @@ class Test:
                 while not done['__all__']:
                     if args.render:
                         env.render()
-                    if args.ros_log:
-                        ros_log.log(env)
                     action_dict = {}
                     for agent_id, o in obs.items():
                         action_dict[agent_id] = act(o, deterministic=False)
@@ -152,20 +145,20 @@ class Test:
         pickle.dump(total_nlogdetcov, open(os.path.join(eval_dir,'all_%d_eval'%(args.nb_test_eps))+model_seed+'%da%dt'%(args.nb_agents,args.nb_targets)+'.pkl', 'wb'))
 
 SET_EVAL_v0 = [
-        {'nb_agents': 1, 'nb_targets': 1},
-        {'nb_agents': 2, 'nb_targets': 1},
-        {'nb_agents': 3, 'nb_targets': 1},
-        {'nb_agents': 4, 'nb_targets': 1},
-        {'nb_agents': 1, 'nb_targets': 2},
-        {'nb_agents': 2, 'nb_targets': 2},
-        {'nb_agents': 3, 'nb_targets': 2},
-        {'nb_agents': 4, 'nb_targets': 2},
-        {'nb_agents': 1, 'nb_targets': 3},
-        {'nb_agents': 2, 'nb_targets': 3},
-        {'nb_agents': 3, 'nb_targets': 3},
-        {'nb_agents': 4, 'nb_targets': 3},
-        {'nb_agents': 1, 'nb_targets': 4},
-        {'nb_agents': 2, 'nb_targets': 4},
-        {'nb_agents': 3, 'nb_targets': 4},
-        {'nb_agents': 4, 'nb_targets': 4},
+        # {'nb_agents': 1, 'nb_targets': 1},
+        # {'nb_agents': 2, 'nb_targets': 1},
+        # {'nb_agents': 3, 'nb_targets': 1},
+        # {'nb_agents': 4, 'nb_targets': 1},
+        # {'nb_agents': 1, 'nb_targets': 2},
+        # {'nb_agents': 2, 'nb_targets': 2},
+        # {'nb_agents': 3, 'nb_targets': 2},
+        # {'nb_agents': 4, 'nb_targets': 2},
+        # {'nb_agents': 1, 'nb_targets': 3},
+        # {'nb_agents': 2, 'nb_targets': 3},
+        # {'nb_agents': 3, 'nb_targets': 3},
+        # {'nb_agents': 4, 'nb_targets': 3},
+        # {'nb_agents': 1, 'nb_targets': 4},
+        # {'nb_agents': 2, 'nb_targets': 4},
+        # {'nb_agents': 3, 'nb_targets': 4},
+        {'nb_agents': 20, 'nb_targets': 20},
 ]

@@ -2,6 +2,9 @@ name: scalableMARL
 channels:
   - pytorch
 dependencies:
+  - python=3.8
+  - pip
+  - numpy
   - nvidia::cudatoolkit=11.3
   - pytorch::pytorch
   - wheel
