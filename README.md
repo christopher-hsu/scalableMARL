@@ -57,7 +57,7 @@ sudo apt-get install python3.8-dev
 
 ### Set up with conda
 ```
-conda env -f create environment.yml
+conda env create -f environment.yml
 conda activate scalableMARL
 source setup
 ```
